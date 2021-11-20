@@ -1,0 +1,45 @@
+1.  .urlopen(url, data, timeout)
+    url:网址，类型可以是字符串也可以是Request对象。
+    data:放在请求头里的附加信息，类型是字节。
+    timeout:限时，类型是数字。
+    功能：打开并读取网页，返回HTTPResponse对象，里面是HTML文档。
+    方法：由urllib.request调用,必须输入url,并用一个变量保存。
+
+2.  BeautifulSoup(html_doc, parser)
+    html_doc:html文档，可以是HTTPResponse对象，也可以是字节。
+    parser:解析器。
+    功能：根据HTML的元素将网页信息进行格式化和组织。返回bs4.BeautifulSoup对象。
+    方法：先通过bs4导入BeautifulSoup()，再输入参数，用变量保存。
+
+3.  .find_all(tag, Attributes, recursive, text, limit, keywords)
+    tag:元素名参数，类型为字符串，或者是字符串组成的列表。
+    attributes:特性参数，类型为字典。特性名为键，特性值为值，都为字符串。
+    recursive:递归参数，类型为布尔值。若为true，查找所有的元素，若为false，查找第一层元素。
+    text:文本参数，类型为字符串。根据text去查找元素。
+    limit:范围限制参数，类型为数字。仅用于此方法。
+    keywords:关键词参数，类型为特性名=特性值。和HTML表达一样。返回第一个匹配的元素。
+    功能：通过元素名、特性、文本内容查找元素，返回列表。列表的值都是HTML的元素对象。
+    方法：通过bs4.BeautifulSoup对象调用，用一个变量保存。
+
+4.  .get_text()
+    功能：清除HTML文档里的标签，返回元素的内容。
+    方法：通过bs4.BeautifulSoup对象调用，用一个变量保存。
+
+5.  导航树
+    功能：通过元素在HTML文档的位置，查找元素。
+
+6.  .next_siblings/.previous_siblings  .next_sibling/.previous_sibling
+    功能：处理兄弟元素。方便收集表格里数据。不会包含本身元素。
+    方法：通过bs4.BeautifulSoup对象调用，用一个变量保存。
+
+7. .children
+    功能：查找子元素
+    方法：通过bs4.BeautifulSoup对象调用，用一个变量保存。
+
+8. .descendants
+    功能：处理后代元素。
+    方法：通过bs4.BeautifulSoup对象调用，用一个变量保存。
+
+9. .parent/.parents
+    功能：处理父元素。
+    方法：通过bs4.BeautifulSoup对象调用，用一个变量保存。
